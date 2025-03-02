@@ -74,7 +74,6 @@ resource "aws_security_group" "registry_security_group" {
 resource "aws_instance" "registry_instance" {
   ami           = var.ami_ec2
   instance_type = var.instance_type_ec2
-  key_name      = var.key_name_ec2
   root_block_device {
     volume_size = var.volume_size_ec2
   }

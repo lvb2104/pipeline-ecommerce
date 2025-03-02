@@ -22,12 +22,6 @@ variable "instance_type_ec2" {
   default     = "t2.micro"
 }
 
-variable "key_name_ec2" {
-  description = "Key pair for EC2"
-  type        = string
-  default     = "EC2KeyPair"
-}
-
 variable "volume_size_ec2" {
   description = "Volume size for EC2"
   type        = number
