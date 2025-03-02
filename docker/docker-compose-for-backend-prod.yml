@@ -1,0 +1,6 @@
+services:
+    backend:
+        image: moda.id.vn/ecommerce/backend-prod:latest
+        restart: always
+        ports:
+            - '80:8080'

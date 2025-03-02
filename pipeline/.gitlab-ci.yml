@@ -1,0 +1,22 @@
+# remember to set the environment variables in the gitlab ci settings
+variables:
+    imageName: $REGISTRY_URL/$PROJECT_NAME/backend-prod:$CI_COMMIT_TAG
+    latestImageName: $REGISTRY_URL/$PROJECT_NAME/backend-prod:latest
+stages:
+    - buildandpush
+
+buildandpush:
+    stage: buildandpush
+    variables:
+        GIT_STRATEGY: clone
+    script:
+        - docker login $REGISTRY_URL -u $REGISTRY_USERNAME -p $REGISTRY_PASSWORD
+        - docker build -t $imageName .
+        - docker push $imageName
+        - docker tag $imageName $latestImageName
+        - docker push $latestImageName
+        - docker rmi $imageName $latestImageName
+    tags:
+        - dev-server
+    only:
+        - tags
