@@ -44,6 +44,7 @@ The pipeline implements a modern DevOps workflow with infrastructure as code, co
 ## Workflow
 
 1. **Development**:
+![Terraform deploy here]()
    - Developer writes code and Terraform configurations
    - Changes are merged to staging branch in GitLab
 
