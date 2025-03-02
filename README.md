@@ -10,7 +10,7 @@ The pipeline implements a modern DevOps workflow with infrastructure as code, co
 
 - **Development Environment**: On-premises infrastructure where developers work with local Terraform configurations
 - **Integration Environment**: GitLab for source control and limited CI pipeline
-- **Deployment Environments**: 
+- **Deployment Environments**:
   - Staging server (on-premises)
   - Production server (on-premises)
   - AWS Cloud resources
