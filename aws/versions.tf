@@ -1,11 +1,11 @@
 terraform {
-  cloud {
-    organization = "ModaWithOrganization"
+  # cloud {
+  #   organization = "ModaWithOrganization"
 
-    workspaces {
-      name = "my-pipeline-aws"
-    }
-  }
+  #   workspaces {
+  #     name = "my-pipeline-aws"
+  #   }
+  # }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
