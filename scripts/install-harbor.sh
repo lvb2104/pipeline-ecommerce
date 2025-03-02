@@ -1,4 +1,5 @@
 #!/bin/bash
+# Note that do not use root user to run this script
 
 # Use root user
 sudo -i
@@ -41,12 +42,13 @@ curl -s https://api.github.com/repos/goharbor/harbor/releases/latest | grep brow
 # Unzip
 tar xzvf harbor-offline*
 
+# Copy config
 cd harbor
 cp harbor.yml.tmpl harbor.yml
 
+# Generate SSL certificate
 export DOMAIN="moda.id.vn"  
 export EMAIL="levanbao2104@gmail.com"
-
 certbot certonly --standalone -d $DOMAIN --preferred-challenges http --agree-tos -m $EMAIL --keep-until-expiring -n
 
 # Update Harbor configuration
