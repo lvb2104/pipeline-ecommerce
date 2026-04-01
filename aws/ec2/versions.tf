@@ -1,3 +1,4 @@
+# plugins, versions for the module itself
 terraform {
   required_providers {
     aws = {

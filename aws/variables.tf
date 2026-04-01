@@ -1,3 +1,4 @@
+# define vars for terraform.tfvars
 variable "cidr_block_vpc" {
   description = "CIDR for VPC"
   type        = string

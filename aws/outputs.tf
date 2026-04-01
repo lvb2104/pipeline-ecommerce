@@ -1,3 +1,4 @@
+# output of main.tf that calls modules
 output "aws_vpc" {
   description = "Name VPC"
   value       = module.registry_ec2.aws_vpc

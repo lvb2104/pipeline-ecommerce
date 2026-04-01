@@ -1,3 +1,4 @@
+# declare plugins and their versions for Terraform itself
 terraform {
   # cloud {
   #   organization = "ModaWithOrganization"
