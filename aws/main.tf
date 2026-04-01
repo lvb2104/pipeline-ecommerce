@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.region
-}
-
 module "registry_ec2" {
   source            = "./ec2"
   cidr_block_vpc    = var.cidr_block_vpc
