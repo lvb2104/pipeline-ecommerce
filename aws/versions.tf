@@ -15,7 +15,7 @@ terraform {
     }
   }
 
-  backend "s3" { ... }  # where to store states
+  # backend "s3" { ... }  # where to store states
 
   required_version = ">= 1.5.0"
 }
